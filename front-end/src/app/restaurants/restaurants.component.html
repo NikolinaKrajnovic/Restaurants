@@ -1,0 +1,29 @@
+<br>
+<div class="row">
+    <div class="col-sm-4">
+            <res-pagination [totalItems]="restaurantList?.count" [pageSize]= "12" (pageChange)= "updateRestaurants($event)"></res-pagination>
+    </div>
+    <div class="col-sm-8">
+    <form class="row">
+    <label class="col-sm-2"><b>Price range</b></label>
+    <input type="number" class="col-sm-4 form-control" name="priceFrom" [(ngModel)] = "filter.priceFrom" (ngModelChange)="updateRestaurants()">
+    <input type="number" class="col-sm-4 form-control" name="priceTo" [(ngModel)]= "filter.priceTo" (ngModelChange)="updateRestaurants()" >
+</form>
+    
+
+    </div>
+</div>
+<br>
+
+
+
+
+<div class="row">
+    <div class="col-sm-12">
+<div class="row">
+<div *ngFor = "let restaurant of restaurantList?.results" class="col-sm-4" >
+<res-restaurant-item [restaurant]= "restaurant"></res-restaurant-item>
+</div>
+</div>
+</div>
+</div>

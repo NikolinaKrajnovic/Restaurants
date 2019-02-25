@@ -1,0 +1,14 @@
+.sidebar-nav {
+    list-style: none;
+    background-color: #eed;
+    width: 100%;
+    padding-left : 10px;
+}
+.sidebar-nav li {
+    line-height: 40px;
+}
+.sidebar-nav li a {
+    text-decoration: none;
+    display: block;
+    color: #555;
+}
